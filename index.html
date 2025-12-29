@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forest Barrett — Portfolio</title>
+  <style>
+    :root{
+      --accent:#2b7cff;
+      --muted:#666;
+      --bg:#f7f9fc;
+      --card:#fff;
+      --radius:10px;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    .container{max-width:1000px;margin:0 auto;padding:1.5rem}
+    header{background:var(--card);box-shadow:0 1px 6px rgba(16,24,40,.06);position:sticky;top:0;z-index:10}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 1.5rem}
+    .logo{margin:0;font-size:1.25rem;color:var(--accent)}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    nav a{text-decoration:none;color:var(--muted);font-weight:600;padding:0.35rem 0.6rem;border-radius:6px}
+    nav a:hover{color:var(--accent);background:rgba(43,124,255,0.06)}
+    /* Hero */
+    .hero{padding:4rem 0;text-align:left;background:
+      linear-gradient(180deg, rgba(43,124,255,0.06), rgba(43,124,255,0.02));border-bottom:1px solid rgba(16,24,40,.03)}
+    .hero h2{margin:0 0 .5rem;font-size:2rem}
+    .hero p{margin:0 0 1rem;color:var(--muted);max-width:60ch}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:.55rem .9rem;border-radius:8px;text-decoration:none;font-weight:600}
+    /* Sections */
+    section{padding:2.5rem 0}
+    .card{background:var(--card);padding:1.25rem;border-radius:var(--radius);box-shadow:0 4px 18px rgba(16,24,40,.04)}
+    .about p{margin:0;color:var(--muted)}
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+    .skill{padding:.75rem;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(16,24,40,.03)}
+    .skill h4{margin:0 0 .5rem;font-size:1rem}
+    .progress{height:10px;background:#e9eef7;border-radius:999px;overflow:hidden}
+    .progress > span{display:block;height:100%;background:var(--accent);border-radius:999px}
+    .skill-list{margin:0;padding:0;list-style:none}
+    .skill-list li{margin:.25rem 0;color:var(--muted)}
+    footer{padding:1.5rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+    @media (max-width:700px){
+      .hero h2{font-size:1.5rem}
+      nav ul{gap:.5rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner container">
+      <h1 class="logo">Forest Barrett</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <h2>Welcome — I'm Forest Barrett</h2>
+        <p>I'm a data scientist who enjoys turning data into insights. I work with data pipelines, build machine learning models, and create clear visualizations to help teams make better decisions.</p>
+        <a class="btn" href="#about">Learn more</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container card">
+        <h3>About Me</h3>
+        <p>
+          I specialize in exploratory data analysis, feature engineering, and production-ready machine learning. I like working on end-to-end projects that include data collection, cleaning, modeling, and visualization. Replace this paragraph with a short bio about yourself, your background, and what you enjoy working on.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills container">
+      <h3>Skills — Data Science</h3>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <h4>Python & Libraries</h4>
+          <div class="skill-list">
+            <li>Python (Pandas, NumPy)</li>
+            <li>scikit-learn — classical ML</li>
+            <li>TensorFlow / PyTorch — deep learning</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:90%"></span></div>
+        </div>
+
+        <div class="skill">
+          <h4>Data Wrangling & SQL</h4>
+          <div class="skill-list">
+            <li>SQL (Postgres, BigQuery)</li>
+            <li>ETL, data cleaning, feature engineering</li>
+            <li>APIs & web scraping</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:85%"></span></div>
+        </div>
+
+        <div class="skill">
+          <h4>Modeling & Evaluation</h4>
+          <div class="skill-list">
+            <li>Regression, classification, clustering</li>
+            <li>Cross-validation, A/B testing</li>
+            <li>Model explainability (SHAP, LIME)</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:80%"></span></div>
+        </div>
+
+        <div class="skill">
+          <h4>Visualization & Reporting</h4>
+          <div class="skill-list">
+            <li>Matplotlib, Seaborn, Plotly</li>
+            <li>Dash / Streamlit for dashboards</li>
+            <li>Storytelling with data</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:82%"></span></div>
+        </div>
+
+        <div class="skill">
+          <h4>Big Data & Deployment</h4>
+          <div class="skill-list">
+            <li>Spark / distributed processing</li>
+            <li>Docker, basic CI/CD</li>
+            <li>Model serving concepts (REST, batch)</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:70%"></span></div>
+        </div>
+
+        <div class="skill">
+          <h4>Statistics & ML Ops</h4>
+          <div class="skill-list">
+            <li>Probability & inferential statistics</li>
+            <li>Feature selection & regularization</li>
+            <li>Experiment design</li>
+          </div>
+          <div style="margin-top:.6rem" class="progress" aria-hidden="true"><span style="width:75%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer anchor -->
+    <section id="contact" class="container" style="padding-top:1.25rem">
+      <div class="card" style="text-align:center">
+        <h4>Contact</h4>
+        <p class="muted">Email: <a href="mailto:you@example.com">you@example.com</a> — LinkedIn / GitHub links</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Forest Barrett — Built with a simple HTML template.
+    </div>
+  </footer>
+
+  <script>
+    // small script to keep year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
